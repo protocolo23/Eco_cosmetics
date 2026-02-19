@@ -1,13 +1,15 @@
 .button {
-  box-sizing: border-box;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: $color-dark;
-  padding: 20px;
+  justify-content: center;
+
+  box-sizing: border-box;
   width: 280px;
-  border: none;
   margin: 30px auto 0;
+  padding: 20px;
+  border: none;
+
+  background-color: $color-dark;
 
   &--bigger-screen {
     @media (min-width: 768px) {
@@ -27,12 +29,13 @@
   }
 
   &--link {
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
     color: $color-light-gray;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
 
     &:hover {
       color: $color-dark;

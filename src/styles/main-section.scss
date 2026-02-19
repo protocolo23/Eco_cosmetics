@@ -44,13 +44,13 @@
 
   .section__images {
     display: block;
-    margin: 0 -20px;
     grid-column: span 2;
     grid-row: 1;
+    margin: 0 -20px;
 
     @include on-mobile-small {
-      margin: 0;
       grid-column: span 6;
+      margin: 0;
     }
 
     @include on-mobile {

@@ -1,24 +1,23 @@
-@import 'utils';
-@import 'typography';
+@import '../styles/utils/vars';
 @import 'header';
 @import 'top-bar';
 @import 'menu';
 @import 'icon';
 @import 'choose';
-@import 'about-brand.scss';
-@import 'about-creator.scss';
-@import 'powdwer.scss';
-@import 'sustainability.scss';
-@import 'shop.scss';
-@import 'card.scss';
-@import 'contact.scss';
-@import 'button.scss';
-@import 'footer.scss';
+@import 'about-brand';
+@import 'about-creator';
+@import 'powdwer';
+@import 'sustainability';
+@import 'shop';
+@import 'card';
+@import 'contact';
+@import 'button';
+@import 'footer';
 @import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap';
 
 html {
-  font-family: Poppins, sans-serif;
   scroll-behavior: smooth;
+  font-family: Poppins, sans-serif;
 }
 
 body {
@@ -32,10 +31,10 @@ header {
 }
 
 main {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 }
 
 footer {
@@ -62,33 +61,38 @@ footer {
 }
 
 .title {
-  color: $color-dark-green;
-  text-transform: uppercase;
+  margin-bottom: 10px;
+
   font-size: 24px;
   font-weight: 600;
   line-height: 36px;
-  margin-bottom: 10px;
+  color: $color-dark-green;
+  text-transform: uppercase;
 }
 
 .about-link {
-  text-transform: uppercase;
   cursor: pointer;
-  text-decoration: none;
-  color: $color-dark-green;
+
   font-size: 14px;
   font-weight: 500;
-
-  &:hover {
-    color: $color-light-green;
-  }
+  color: $color-dark-green;
+  text-decoration: none;
+  text-transform: uppercase;
 
   &::after {
     content: '';
+
     display: block;
+
     width: 86px;
     height: 1px;
-    background-color: $color-dark-green;
     margin-top: 8px;
+
+    background-color: $color-dark-green;
+  }
+
+  &:hover {
+    color: $color-light-green;
   }
 }
 
@@ -98,31 +102,37 @@ footer {
 
 .about-link--bigger-screen::after {
   content: '';
+
   display: block;
+
   width: 86px;
   height: 1px;
-  background-color: $color-dark-green;
   margin-top: 8px;
   margin-left: 40px;
+
+  background-color: $color-dark-green;
 }
 
 .active {
-  color: $color-dark;
   border-bottom: 2px solid black;
+  color: $color-dark;
 
   &:active {
-    color: $color-dark;
     border-bottom: 2px solid black;
+    color: $color-dark;
   }
 }
 
 .visually-hidden {
   position: absolute;
+
+  overflow: hidden;
+
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  padding: 0;
   border: 0;
+
+  clip: rect(0, 0, 0, 0);
 }
