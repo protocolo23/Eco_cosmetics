@@ -4,11 +4,6 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media (min-width: 1280px) {
-    height: 50px;
-    width: 270px;
-  }
-
   &--menu {
     background-image: url('../images/icon-Menu.png');
 
@@ -23,7 +18,8 @@
 
     @media (min-width: 1280px) {
       display: none;
-     /* margin-left: 0;*/ // 🔧 ajuste feito para aproximar o logo da borda
+
+      /* margin-left: 0; */ // 🔧 ajuste feito para aproximar o logo da borda
     }
   }
 
@@ -61,17 +57,20 @@
     cursor: pointer;
     background-image: url('../images/favicon/icon-facebook.svg');
     background-repeat: no-repeat;
-    cursor: pointer;
   }
 
   &--instagram {
     cursor: pointer;
     background-image: url('../images/favicon/icon-instagram.svg');
     background-repeat: no-repeat;
-    cursor: pointer;
 
     path:hover {
       fill: red;
+
+      @media (min-width: 1280px) {
+        width: 270px;
+        height: 50px;
+      }
     }
   }
 }
