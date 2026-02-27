@@ -7,10 +7,12 @@
 
   &__image {
     display: block;
-    object-fit: cover;
+
     width: 380px;
     height: 500px;
     margin-right: 20px;
+
+    object-fit: cover;
 
     @media (max-width: $tabletWidth) {
       width: calc(50vw - 37px);
@@ -23,13 +25,14 @@
 
   &__name,
   &__price {
+    padding-top: 20px;
+
     font-size: 20px;
     font-weight: bold;
     line-height: 150%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     color: #333;
-    padding-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 
     @media (max-width: $mobileWidth) {
       padding-left: 20px;

@@ -1,32 +1,23 @@
 .promo {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
   max-width: $maxWidth;
   margin: 100px auto 200px;
   padding: 0 $paddingDesktop;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-
-  @media (max-width: $tabletWidth) {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 0 $paddingTablet;
-    margin: 0;
-  }
-
-  @media (max-width: $mobileWidth) {
-    padding: 0 $paddingMobile;
-  }
 
   &__group {
-    padding-left: 100px;
-    padding-right: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    padding-right: 20px;
+    padding-left: 100px;
+
     @media (max-width: $tabletWidth) {
-      padding: 30px;
       align-items: center;
+      padding: 30px;
     }
 
     @media (max-width: $mobileWidth) {
@@ -36,14 +27,14 @@
 
   &__title {
     font-size: 60px;
-    line-height: 130%;
     font-weight: bold;
+    line-height: 130%;
     color: $witchGray;
 
     @media (max-width: $tabletWidth) {
       max-width: 500px;
-      text-align: center;
       font-size: 36px;
+      text-align: center;
     }
 
     @media (max-width: $mobileWidth) {
@@ -52,10 +43,10 @@
   }
 
   &__message {
+    padding: 30px 0;
     font-size: 22px;
     line-height: 130%;
     color: $witchGray;
-    padding: 30px 0;
 
     @media (max-width: $tabletWidth) {
       font-size: 18px;
@@ -66,19 +57,23 @@
 
   &__link {
     display: block;
-    color: #f2f2f2;
-    background-color: $witchGray;
+
+    box-sizing: border-box;
     width: 280px;
     height: 60px;
-    box-sizing: border-box;
+    margin-top: 10px;
     border: 1px solid $witchGray;
+
     font-size: 16px;
     font-weight: bold;
     line-height: 60px;
+    color: #f2f2f2;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    margin-top: 10px;
+
+    background-color: $witchGray;
+
     transition: 0.5s;
 
     &:hover {
@@ -98,8 +93,19 @@
 
     @media (max-width: $mobileWidth) {
       width: calc(100% + 40px);
-      margin-left: -20px;
       margin-right: -20px;
+      margin-left: -20px;
     }
+  }
+
+  @media (max-width: $tabletWidth) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0;
+    padding: 0 $paddingTablet;
+  }
+
+  @media (max-width: $mobileWidth) {
+    padding: 0 $paddingMobile;
   }
 }

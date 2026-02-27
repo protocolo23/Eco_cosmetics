@@ -1,18 +1,10 @@
 .header {
   padding: 40px 50px;
 
-  @media (max-width: $tabletWidth) {
-    padding: 10px $paddingTablet;
-  }
-
-  @media (max-width: $mobileWidth) {
-    padding: 0 $paddingMobile;
-  }
-
   &__wrapper {
+    position: relative;
     max-width: $maxWidth;
     margin: 0 auto;
-    position: relative;
   }
 
   &__logo {
@@ -52,5 +44,13 @@
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  @media (max-width: $tabletWidth) {
+    padding: 10px $paddingTablet;
+  }
+
+  @media (max-width: $mobileWidth) {
+    padding: 0 $paddingMobile;
   }
 }

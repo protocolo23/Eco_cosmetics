@@ -1,14 +1,6 @@
 .shop {
   margin-bottom: 200px;
 
-  @media (max-width: $tabletWidth) {
-    margin-bottom: 100px;
-  }
-
-  @media (max-width: $mobileWidth) {
-    margin-bottom: 50px;
-  }
-
   &__deco-wrapper {
     @extend %deco-wrapper;
   }
@@ -43,9 +35,9 @@
   &__title {
     font-size: 36px;
     line-height: 150%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     color: $witchGreen;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   &__tab-wrapper {
@@ -57,24 +49,28 @@
   }
 
   &__tab {
-    display: inline-block;
     cursor: pointer;
+
+    display: inline-block;
+
+    margin: 0 20px 20px 0;
+    padding-top: 20px;
+    border-bottom: 2px solid transparent;
+
     font-size: 18px;
     font-weight: bold;
     line-height: 150%;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     color: $witchLightGray;
-    border-bottom: 2px solid transparent;
-    padding-top: 20px;
-    margin: 0 20px 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
     transition: 0.5s;
 
     &:hover {
       padding-top: 0;
       padding-bottom: 20px;
-      color: $witchGray;
       border-bottom: 2px solid $witchGray;
+      color: $witchGray;
     }
   }
 
@@ -84,14 +80,14 @@
   &__radio-candles:checked ~ * &__tab-candles {
     padding-top: 0;
     padding-bottom: 20px;
-    color: $witchGray;
     border-bottom: 2px solid $witchGray;
+    color: $witchGray;
   }
 
   &__slider {
+    overflow: hidden;
     display: none;
     background-color: #e4dfd3;
-    overflow: hidden;
 
     @media (max-width: $mobileWidth) {
       margin: 0 -20px;
@@ -106,8 +102,8 @@
   }
 
   &__arrows {
-    display: flex;
     position: relative;
+    display: flex;
     padding: 30px 0;
 
     @media (max-width: $tabletWidth) {
@@ -119,15 +115,19 @@
     }
   }
 
-  &__arrow-left {
-    display: inline-block;
+  %shop-arrow {
     cursor: pointer;
+
+    transform: rotate(-45deg);
+
+    display: inline-block;
+
     width: 20px;
     height: 20px;
     margin: 5px;
     border-top: 2px solid $witchLightGray;
     border-left: 2px solid $witchLightGray;
-    transform: rotate(-45deg);
+
     transition: 0.5s;
 
     &:hover {
@@ -135,8 +135,12 @@
     }
   }
 
+  &__arrow-left {
+    @extend %shop-arrow;
+  }
+
   &__arrow-right {
-    @extend .shop__arrow-left;
+    @extend %shop-arrow;
 
     transform: rotate(135deg);
     margin-left: 20px;
@@ -146,15 +150,25 @@
     @extend %button;
 
     transform: translateX(360px);
-    transition: color 0.5s, background-color 0.5s;
+    transition:
+      color 0.5s,
+      background-color 0.5s;
 
     @media (max-width: 1300px) {
-      margin: 0 auto;
       transform: translateX(-75px);
+      margin: 0 auto;
     }
 
     @media (max-width: $tabletWidth) {
       transform: translateX(0);
     }
+  }
+
+  @media (max-width: $tabletWidth) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $mobileWidth) {
+    margin-bottom: 50px;
   }
 }

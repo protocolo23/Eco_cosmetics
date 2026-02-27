@@ -8,38 +8,47 @@
 %deco-text {
   position: absolute;
   left: 70px;
-  transform: rotate(270deg);
   transform-origin: left;
-  text-transform: uppercase;
+  transform: rotate(270deg);
+
   font-size: 14px;
   color: rgba(52, 79, 16, 0.5);
+  text-transform: uppercase;
+
   transition: 5s;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 5px;
+    left: -110px;
+
+    display: block;
+
+    width: 100px;
+    height: 1px;
+
+    background-color: rgba(52, 79, 16, 0.5);
+  }
 
   @media (max-width: $tabletWidth) {
     display: none;
-  }
-
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100px;
-    height: 1px;
-    background-color: rgba(52, 79, 16, 0.5);
-    left: -110px;
-    top: 5px;
   }
 }
 
 %link {
   display: inline-block;
-  font-size: 14px;
-  line-height: 130%;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $witchGreen;
+
   padding-top: 10px;
   border-bottom: 1px solid transparent;
+
+  font-size: 14px;
+  line-height: 130%;
+  color: $witchGreen;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
   transition: 0.5s;
 
   &:hover {
@@ -51,20 +60,25 @@
 
 %button {
   cursor: pointer;
-  margin-top: 20px;
+
   display: block;
-  color: #f2f2f2;
-  background-color: $witchGray;
+
+  box-sizing: border-box;
   width: $buttonWidth;
   height: $buttonHeight;
-  box-sizing: border-box;
+  margin-top: 20px;
   border: 1px solid $witchGray;
+
   font-size: 16px;
   font-weight: bold;
   line-height: $buttonHeight;
+  color: #f2f2f2;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+
+  background-color: $witchGray;
+
   transition: 0.5s;
 
   &:hover {

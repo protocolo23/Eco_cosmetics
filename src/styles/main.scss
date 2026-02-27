@@ -1,21 +1,21 @@
-@import "utils";
-@import "header";
-@import "nav";
-@import "menu";
-@import "promo";
-@import "info";
-@import "about";
-@import "product";
-@import "shop";
-@import "about2";
-@import "powder";
-@import "contact-us";
-@import "form";
-@import "footer";
+@import 'utils';
+@import 'header';
+@import 'nav';
+@import 'menu';
+@import 'promo';
+@import 'info';
+@import 'about';
+@import 'product';
+@import 'shop';
+@import 'about2';
+@import 'powder';
+@import 'contact-us';
+@import 'form';
+@import 'footer';
 
 html {
-  font-family: "Sharp Sans No2", sans-serif;
   scroll-behavior: smooth;
+  font-family: 'Sharp Sans No2', sans-serif;
 }
 
 body {
