@@ -1,138 +1,23 @@
-@import '../styles/utils/vars';
-@import 'header';
-@import 'top-bar';
-@import 'menu';
-@import 'icon';
-@import 'choose';
-@import 'about-brand';
-@import 'about-creator';
-@import 'powdwer';
-@import 'sustainability';
-@import 'shop';
-@import 'card';
-@import 'contact';
-@import 'button';
-@import 'footer';
-@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap';
+@import "utils";
+@import "header";
+@import "nav";
+@import "menu";
+@import "promo";
+@import "info";
+@import "about";
+@import "product";
+@import "shop";
+@import "about2";
+@import "powder";
+@import "contact-us";
+@import "form";
+@import "footer";
 
 html {
+  font-family: "Sharp Sans No2", sans-serif;
   scroll-behavior: smooth;
-  font-family: Poppins, sans-serif;
 }
 
 body {
-  background-color: $color-cream;
-}
-
-header {
-  @media (min-width: 768px) {
-    padding: 10px 40px;
-  }
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
-
-footer {
-  width: 100%;
-  margin-top: 80px;
-  background-color: $color-light-green;
-}
-
-.photo_hover {
-  &:hover {
-    box-shadow: 1px 4px 16px $color-light-green;
-  }
-}
-
-.container {
-  @media (min-width: 768px) {
-    padding: 10px 40px;
-  }
-
-  @media (min-width: 1280px) {
-    max-width: 1180px;
-    margin: auto;
-  }
-}
-
-.title {
-  margin-bottom: 10px;
-
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 36px;
-  color: $color-dark-green;
-  text-transform: uppercase;
-}
-
-.about-link {
-  cursor: pointer;
-
-  font-size: 14px;
-  font-weight: 500;
-  color: $color-dark-green;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &::after {
-    content: '';
-
-    display: block;
-
-    width: 86px;
-    height: 1px;
-    margin-top: 8px;
-
-    background-color: $color-dark-green;
-  }
-
-  &:hover {
-    color: $color-light-green;
-  }
-}
-
-.about-link--bigger-screen {
-  margin-left: 40px;
-}
-
-.about-link--bigger-screen::after {
-  content: '';
-
-  display: block;
-
-  width: 86px;
-  height: 1px;
-  margin-top: 8px;
-  margin-left: 40px;
-
-  background-color: $color-dark-green;
-}
-
-.active {
-  border-bottom: 2px solid black;
-  color: $color-dark;
-
-  &:active {
-    border-bottom: 2px solid black;
-    color: $color-dark;
-  }
-}
-
-.visually-hidden {
-  position: absolute;
-
-  overflow: hidden;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-
-  clip: rect(0, 0, 0, 0);
+  background-color: #e4dfd3;
 }

@@ -1,116 +1,19 @@
-html,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 body,
-div,
-span,
-object,
-iframe,
+ul,
+li,
 h1,
 h2,
 h3,
 h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+p {
   margin: 0;
   padding: 0;
-  border: 0;
-
-  font-size: 100%;
-  vertical-align: baseline;
-
-  background: transparent;
-  outline: 0;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-
-  font-size: 100%;
-  vertical-align: baseline;
-
-  background: transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-  color: #000;
-  text-decoration: none;
-  background-color: #ff9;
-}
-
-/* change colours to suit your needs */
-mark {
-  font-size: inherit;
-  font-weight: bold;
-  font-style: italic;
-  color: #000;
-
-  background-color: #ff9;
-}
-
-hr {
-  display: block;
-
-  height: 1px;
-  margin: 1em 0;
-  padding: 0;
-  border: 0;
-  border-top: 1px solid #ccc;
 }
